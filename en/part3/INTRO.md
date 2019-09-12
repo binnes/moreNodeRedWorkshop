@@ -8,7 +8,7 @@
 
 [JSONata](http://jsonata.org) is a JSON query and transformation language that is built into Node-RED.  It provides a lightweight, but powerful way to query and transform JSON data.
 
-Both the switch and Change nodes have options to use JSONata expressions within the node and also provide a JSONata editor where test data can be entered allowing live results to be displayed as the JSONata expression is edited.
+Both the **Switch** and **Change** nodes have options to use JSONata expressions within the node and they also provide a JSONata editor, where test data can be entered allowing live results to be displayed as the JSONata expression is edited.
 
 Full documentation can be found on the [JSONata](http://jsonata.org) site.  
 
