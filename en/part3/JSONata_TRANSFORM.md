@@ -1,3 +1,9 @@
+*Quick links :*
+[Home](/README.md) - [Part 1](../part1/README.md) - [Part 2](../part2/README.md) - [**Part 3**](../part3/README.md) - [Part 4](../part4/README.md) - [Part 5](../part5/README.md)
+***
+**Part 3** - [Intro to JSONata](INTRO.md) - [**Data transformation**](JSONata_TRANSFORM.md) - [JSONata in switch node](JSONata_SWITCH.md) - [Practical work](JSONata_PRACTICAL.md)
+***
+
 # Formatting JSON with JSONata
 
 For this section we will use the following data:
@@ -252,3 +258,9 @@ The sample solution flow for this exercise is :
 ```JSON
 [{"id":"8446da20.4c374","type":"inject","z":"78e6a193.5e7df8","name":"","topic":"","payload":"[{\"FirstName\":\"Fred\",\"Surname\":\"Smith\",\"Age\":28,\"Address\":{\"Street\":\"Hursley Park\",\"City\":\"Winchester\",\"Postcode\":\"SO21 2JN\"},\"Phone\":[{\"type\":\"home\",\"number\":\"+44 203 5441234\"},{\"type\":\"office\",\"number\":\"00 44 1962 001234\"},{\"type\":\"mobile\",\"number\":\"0044 7777-001234\"}]},{\"FirstName\":\"Freda\",\"Surname\":\"Smith\",\"Age\":25,\"Address\":{\"Street\":\"Hursley Park\",\"City\":\"Winchester\",\"Postcode\":\"SO21 2JN\"},\"Phone\":[{\"type\":\"home\",\"number\":\"+44 203 9871234\"},{\"type\":\"office\",\"number\":\"00 44 1962 998765\"},{\"type\":\"mobile\",\"number\":\"0044 7777-098765\"}]}]","payloadType":"json","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":210,"y":260,"wires":[["c4bc1b50.cecb9"]]},{"id":"38b7008e.0bc4e","type":"debug","z":"78e6a193.5e7df8","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","x":510,"y":340,"wires":[]},{"id":"c4bc1b50.cecb9","type":"change","z":"78e6a193.5e7df8","name":"","rules":[{"t":"set","p":"payload","pt":"msg","to":"payload{\t   FirstName & ' ' & Surname : \t   Phone{type : $replace(number, /^(\\+|00)\\s*(\\d*)[\\s-]+(\\d*)[\\s-]+(\\d*)$/,'+$2 $3-$4')}\t} ","tot":"jsonata"}],"action":"","property":"","from":"","to":"","reg":false,"x":360,"y":300,"wires":[["38b7008e.0bc4e"]]}]
 ```
+
+***
+**Part 3** - [Intro to JSONata](INTRO.md) - [**Data transformation**](JSONata_TRANSFORM.md) - [JSONata in switch node](JSONata_SWITCH.md) - [Practical work](JSONata_PRACTICAL.md)
+***
+*Quick links :*
+[Home](/README.md) - [Part 1](../part1/README.md) - [Part 2](../part2/README.md) - [**Part 3**](../part3/README.md) - [Part 4](../part4/README.md) - [Part 5](../part5/README.md)

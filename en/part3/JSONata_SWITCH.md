@@ -1,3 +1,9 @@
+*Quick links :*
+[Home](/README.md) - [Part 1](../part1/README.md) - [Part 2](../part2/README.md) - [**Part 3**](../part3/README.md) - [Part 4](../part4/README.md) - [Part 5](../part5/README.md)
+***
+**Part 3** - [Intro to JSONata](INTRO.md) - [Data transformation](JSONata_TRANSFORM.md) - [**JSONata in switch node**](JSONata_SWITCH.md) - [Practical work](JSONata_PRACTICAL.md)
+***
+
 # Using JSONata in a switch node
 
 In this section we will use JSONata to calculate a value in a switch node.
@@ -21,3 +27,9 @@ The sample solution flow for this exercise is here :
 ```JSON
 [{"id":"60f97345.24d704","type":"inject","z":"78e6a193.5e7df8","name":"","topic":"","payload":"","payloadType":"date","repeat":"","crontab":"","once":false,"onceDelay":0.1,"x":180,"y":580,"wires":[["2feaf406.cf9f54"]]},{"id":"2feaf406.cf9f54","type":"http request","z":"78e6a193.5e7df8","name":"","method":"GET","ret":"obj","paytoqs":false,"url":"https://api.npmjs.org/downloads/range/last-week/node-red","tls":"","persist":false,"proxy":"","authType":"","x":330,"y":600,"wires":[["a2e91491.07144"]]},{"id":"fb6b184c.34cbb","type":"debug","z":"78e6a193.5e7df8","name":"","active":true,"tosidebar":true,"console":false,"tostatus":false,"complete":"false","x":790,"y":620,"wires":[]},{"id":"a2e91491.07144","type":"switch","z":"78e6a193.5e7df8","name":"","property":"payload.downloads[6].downloads","propertyType":"msg","rules":[{"t":"gte","v":"$average(payload.downloads.downloads)","vt":"jsonata"},{"t":"else"}],"checkall":"true","repair":false,"outputs":2,"x":470,"y":620,"wires":[["78ccde2a.8a133"],["b21d3e64.07f77"]]},{"id":"78ccde2a.8a133","type":"change","z":"78e6a193.5e7df8","name":"","rules":[{"t":"set","p":"payload","pt":"msg","to":"greater or equal","tot":"str"}],"action":"","property":"","from":"","to":"","reg":false,"x":620,"y":600,"wires":[["fb6b184c.34cbb"]]},{"id":"b21d3e64.07f77","type":"change","z":"78e6a193.5e7df8","name":"","rules":[{"t":"set","p":"payload","pt":"msg","to":"less","tot":"str"}],"action":"","property":"","from":"","to":"","reg":false,"x":620,"y":640,"wires":[["fb6b184c.34cbb"]]}]
 ```
+
+***
+**Part 3** - [Intro to JSONata](INTRO.md) - [Data transformation](JSONata_TRANSFORM.md) - [**JSONata in switch node**](JSONata_SWITCH.md) - [Practical work](JSONata_PRACTICAL.md)
+***
+*Quick links :*
+[Home](/README.md) - [Part 1](../part1/README.md) - [Part 2](../part2/README.md) - [**Part 3**](../part3/README.md) - [Part 4](../part4/README.md) - [Part 5](../part5/README.md)
