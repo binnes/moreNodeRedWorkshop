@@ -21,7 +21,7 @@ The server responds with a message containing a header section and a body sectio
 
 The URL (Uniform Resource Locator) contains a number of pieces of information to identify the server on the network and also identify the service or resource on the server the client wants to access.  The URL can also contain additional data to add additional detail to the request, which can be thought of as parameters to an API call:
 
-![URL parts](image/url.png)
+![URL parts](image/URL.png)
 
 ### Request Method
 
