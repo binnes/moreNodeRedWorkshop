@@ -4,6 +4,8 @@ Node-RED provides 2 nodes to implement an HTTP API, the **HTTP in** and **HTTP r
 
 The **HTTP in** node is used to create the API endpoint and accept requests from clients.  The **HTTP response** node sends the response back to the client.
 
+![implement API](image/implementAPI.png)
+
 The configuration for the **HTTP in** node allows you to specify the HTTP method and URL for the endpoint ![http in config](image/httpInConfig.png).
 
 In the previous section we saw the API for Transport for London.  The API endpoint used had parameters in the URL path ```https://api.tfl.gov.uk/Journey/JourneyResults/51.5026,-0.1128/to/51.5179,-0.0908```, where the start and end locations are provided in the URL.
