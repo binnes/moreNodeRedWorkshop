@@ -22,6 +22,8 @@ The http request node is used to make the API call.  In the configuration of the
 - there are other options to allow SSL configuration, specify basic http authentication parameters, allow proxied connections
 - the Return property specifies how the results are handled.  Above we expect JSON to be returned from the API call and want the results to be parsed into a JavaScript object.
 
+Note:  *When sending a URL to a server the URL string needs to be URL encoded, to replace any characters not permitted in a URL with the '%' followed by their character code values.  The HTTP Request node takes care of any required URL encoding.  E.g the ```mode=tube,walking``` query parameter is sent as ```mode=tube%2cwalking```*
+
 ## Modifying the URL from a flow
 
 You can manipulate the URL in a number of ways.  If you are making a GET request and don't need to send any data to the API call then the payload can be used to append query parameters to the specified URL.  The payload must contain a JavaScript object, .e.g.
