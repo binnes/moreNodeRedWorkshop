@@ -66,10 +66,10 @@ For HTTP methods that need to pass data to the server, then the msg.payload is u
 
 ## Specifying a return type
 
-By default this API returns JSON data, but I can modify the data format returned by the API by setting a **Content-Type** header.  The API allows use of **text/xml** or **application/xml** in addition to the **application/json** value.
+By default this API returns JSON data, but I can modify the data format returned by the API by setting an **Accept** header.  The API allows use of **text/xml** or **application/xml** in addition to the **application/json** value.
 
 To set a header in the HTTP request you need to pass in the values in the msg.headings property.  This should be a JavaScript object.  
 
-E.g. **msg.headers** = ```{ "Content-Type": "application/json" }```
+E.g. **msg.headers** = ```{ "Accept": "text/xml" }```
 
 Note : If the **Return** property is set as parsed JSON then the API needs to return JSON data.
