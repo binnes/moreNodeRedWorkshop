@@ -1,3 +1,9 @@
+*Quick links :*
+[Home](/README.md) - [Part 1](../part1/README.md) - [**Part 2**](../part2/README.md) - [Part 3](../part3/README.md) - [Part 4](../part4/README.md) - [Part 5](../part5/README.md)
+***
+**Part 2** - [Web and REST APIs](API.md) - [Calling an API from Node-RED](CALLING_API.md) - [**Implementing an API in Node-RED**](CREATING_API.md) - [API Practical](API_PRACTICAL.md)
+***
+
 # Creating an API
 
 Node-RED provides 2 nodes to implement an HTTP API, the **HTTP in** and **HTTP response** nodes.
@@ -72,3 +78,9 @@ The Status code and headers can be specified in the **HTTP response** node confi
 - msg.payload - the data to be sent back to the client in the body of the message
 - msg.statusCode - the HTTP status code to be sent to the client
 - msg.headers - a JavaScript object containing the headers to send back to the client
+
+***
+**Part 2** - [Web and REST APIs](API.md) - [Calling an API from Node-RED](CALLING_API.md) - [**Implementing an API in Node-RED**](CREATING_API.md) - [API Practical](API_PRACTICAL.md)
+***
+*Quick links :*
+[Home](/README.md) - [Part 1](../part1/README.md) - [**Part 2**](../part2/README.md) - [Part 3](../part3/README.md) - [Part 4](../part4/README.md) - [Part 5](../part5/README.md)

@@ -1,3 +1,9 @@
+*Quick links :*
+[Home](/README.md) - [Part 1](../part1/README.md) - [**Part 2**](../part2/README.md) - [Part 3](../part3/README.md) - [Part 4](../part4/README.md) - [Part 5](../part5/README.md)
+***
+**Part 2** - [**Web and REST APIs**](API.md) - [Calling an API from Node-RED](CALLING_API.md) - [Implementing an API in Node-RED](CREATING_API.md) - [API Practical](API_PRACTICAL.md)
+***
+
 # Web APIs and REST APIs
 
 Using HTTP based communication is a common way for applications and micro-services to communicate in cloud native applications.
@@ -74,3 +80,9 @@ The important thing is that the use of the HTTP methods is uniform and consisten
 Node-RED has a standard set of nodes to make it really easy to call HTTP APIs and implement HTTP APIs in Node-RED.
 
 ![http nodes](image/httpNodes.png)
+
+***
+**Part 2** - [**Web and REST APIs**](API.md) - [Calling an API from Node-RED](CALLING_API.md) - [Implementing an API in Node-RED](CREATING_API.md) - [API Practical](API_PRACTICAL.md)
+***
+*Quick links :*
+[Home](/README.md) - [Part 1](../part1/README.md) - [**Part 2**](../part2/README.md) - [Part 3](../part3/README.md) - [Part 4](../part4/README.md) - [Part 5](../part5/README.md)
