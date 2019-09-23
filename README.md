@@ -2,6 +2,8 @@
 
 Node-RED workshop to go beyond the basics.
 
+Before starting the workshop please ensure you have all the [pre-requsistes](en/PREREQS.md) installed.
+
 ## [Part 1 - Watson Services](/en/part1/README.md)
 
 In this section of the workshop you will explore Watson services available on the IBM Cloud and see how to use the services from a Node-RED flow.
