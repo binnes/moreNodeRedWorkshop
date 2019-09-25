@@ -15,6 +15,7 @@ Before you start working through the workshop please ensure you have all the pre
 
 - [IBM Cloud](https://cloud.ibm.com) free lite account
 - [Docker Hub](https://hub.docker.com) account
+- [GitHub](https://github.com) account
 - [Twitter developer](https://developer.twitter.com) account
 
 ***
