@@ -8,7 +8,12 @@ Before you start working through the workshop please ensure you have all the pre
 
 ## Software to be installed
 
-- [Node.js](https://nodejs.org/en/) v8
+- [Node.js](https://nodejs.org/en/) v8 or current supported level of Node.JS
+- [Python]() v2.7 - Python 3.x not supported for building Node.js native modules
+- Build tools needed for building Node.js native modules
+  - Linux : `apt-get install build-essential` or equivalent on your Linux distribution
+  - MacOS : `xcode-select --install`
+  - Windows : `npm install --global --production windows-build-tools` from an elevated PowerShell or CMD.exe run as Administrator
 - [Docker](https://www.docker.com) desktop or Docker community edition if using Linux as your workstation OS
 
 ## Accounts needed
