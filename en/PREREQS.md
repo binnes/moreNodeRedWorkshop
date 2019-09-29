@@ -18,10 +18,11 @@ Before you start working through the workshop please ensure you have all the pre
 
 ## Accounts needed
 
-- [IBM Cloud](https://cloud.ibm.com) free lite account
+- [IBM Cloud](https://cloud.ibm.com) free IBM Cloud lite account
 - [Docker Hub](https://hub.docker.com) account
 - [GitHub](https://github.com) account
 - [Twitter developer](https://developer.twitter.com) account
+- [MapBox Developer](https://www.mapbox.com/developer-network/#join_dev_net) account (Optional)
 
 ***
 *Quick links :*
