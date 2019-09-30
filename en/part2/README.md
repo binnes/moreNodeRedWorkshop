@@ -4,6 +4,8 @@
 
 # Part 2
 
+## [Local Node-RED](NODERED.md)
+
 ## [Web and REST APIs](API.md)
 
 ## [Calling an API from Node-RED](CALLING_API.md)
