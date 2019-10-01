@@ -6,7 +6,7 @@
 
 # I - [Codebase](https://12factor.net/codebase)
 
-One codebase tracked in revision control, many deploys
+*One codebase tracked in revision control, many deploys*
 
 First we need to decide what is a Node-RED application code base?
 
