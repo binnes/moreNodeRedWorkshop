@@ -12,7 +12,7 @@ As an application is deployed in different environments (production, test) or in
 
 Cloud runtime environment pass configuration to applications through a number of different mechanisms.  Setting environment variables is a common approach.
 
-In Node-RED the configuration is usually found within the configuration of the nodes.  In the previous section, when you enabled projects within the Node-RED editor you diabled configuration encryption, so it is easy to see the configuraition 
+In Node-RED the configuration is usually found within the configuration of the nodes.  In the previous section, when you enabled projects within the Node-RED editor you disabled configuration encryption, so it is easy to see the configuration
 
 Some nodes are aware of Cloud Foundry services and will pull configuration from the **VCAP_SERVICES** environment variable to be able to automatically connect with Cloud Foundry hosted services.
 
