@@ -14,7 +14,15 @@ Before you start working through the workshop please ensure you have all the pre
   - Linux : `apt-get install build-essential` or equivalent on your Linux distribution
   - MacOS : `xcode-select --install`
   - Windows : `npm install --global --production windows-build-tools` from an elevated PowerShell or CMD.exe run as Administrator
-- [Docker](https://www.docker.com) desktop or Docker community edition if using Linux as your workstation OS
+- [Docker](https://www.docker.com) desktop or Docker community edition
+  - MacOS and Windows : install Docker Desktop
+  - Linux :
+    - `curl -fsSL test.docker.com -o get-docker.sh && sh get-docker.sh`
+    - `sudo usermod -aG docker $USER`
+    - `docker run --rm --privileged docker/binfmt:66f9012c56a8316f9244ffd7622d7c21c1f6f28d`
+    - `echo 'export DOCKER_CLI_EXPERIMENTAL=enabled' >>~/.bashrc`
+    - `sudo systemctl enable docker.service`
+    - `sudo systemctl start docker.service`
 
 ## Accounts needed
 
