@@ -14,7 +14,7 @@ Before you start working through the workshop please ensure you have all the pre
   - Linux : `apt-get install build-essential` or equivalent on your Linux distribution
   - MacOS : `xcode-select --install`
   - Windows : `npm install --global --production windows-build-tools` from an elevated PowerShell or CMD.exe run as Administrator
-- [Docker](https://www.docker.com) desktop or Docker community edition
+- [Docker](https://www.docker.com) desktop or Docker community edition - version 19.03 or higher needs to be installed
   - MacOS and Windows : install Docker Desktop
   - Linux :
     - `curl -fsSL test.docker.com -o get-docker.sh && sh get-docker.sh`

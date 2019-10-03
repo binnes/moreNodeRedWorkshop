@@ -28,7 +28,8 @@ Before building the app we will add another few nodes to add an Web endpoint.
 
 2. Commit and push the change to git
 3. Enable experimental features in Docker:
-    - Linux ?
+    - Linux
+      - Environemnt variable **DOCKER_CLI_EXPERIMENTAL** should be set to **enabled**
     - MacOS and Windows
       - Start Docker if it is not running
       - Click the Docker icon in the bottom notification window and select **settings** or **Preferences** then the **Daemon** section.  Enable Experimental features
