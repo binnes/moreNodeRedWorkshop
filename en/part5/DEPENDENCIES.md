@@ -36,14 +36,22 @@ Before building the app we will add another few nodes to add an Web endpoint.
 4. Open a command window.  You will use the new docker buildx command to build and push a multi-arch image to dockerhub.
 5. Before you can build a container you need to create a new builder.  Enter the command:  
   `docker buildx create --name NRbuilder --use`
-6. Check you have a builder running using command : `docker buildx ls`
-7. Inspect the builder with command : `docker buildx inspect --bootstrap`, which will also start the builder if it is not running
-8. Now the builder is up and running you can build a multi-arch container and push it to your dockerhub account.  First ensure you are logged into dockerhub : `docker login`
-9. Build and push the image : `docker buildx build --platform linux/amd64,linux/arm/v7 -t binnes/node-red-docker-sample --push .`, replace **binnes** with your docker username.  Here you see we are asking to build an image for 3 different architectures.  AMD/Intel 64 bit, ARM 64bit and ARM 32bit v7 (Raspberry Pi 3/4).  You can also add additional architectures, such as **linux/s390x** to add support for IBM Z systems or **linux/ppc64le** for IBM POWER systems
-10. Inspect the image using command `docker buildx imagetools inspect docker.io/binnes/node-red-docker-sample:latest`
-11. Stop your local Node-RED using Ctrl-C then run the container using command : `docker run -dit -p 1880:1880 binnes/node-red-docker-sample:latest`.
+6. Check you have a builder running using command :  
+  `docker buildx ls`
+7. Inspect the builder with command :  
+  `docker buildx inspect --bootstrap`  
+  which will also start the builder if it is not running
+8. Now the builder is up and running you can build a multi-arch container and push it to your dockerhub account.  First ensure you are logged into dockerhub :  
+  `docker login`
+9. Build and push the image :  
+  `docker buildx build --platform linux/amd64,linux/arm/v7 -t binnes/node-red-docker-sample --push .`  
+  replace **binnes** with your docker username.  Here you see we are asking to build an image for 3 different architectures.  AMD/Intel 64 bit, ARM 64bit and ARM 32bit v7 (Raspberry Pi 3/4).  You can also add additional architectures, such as **linux/s390x** to add support for IBM Z systems or **linux/ppc64le** for IBM POWER systems
+10. Inspect the image using command  
+  `docker buildx imagetools inspect docker.io/binnes/node-red-docker-sample:latest`
+11. Stop your local Node-RED using Ctrl-C then run the container using command :  
+  `docker run -dit -p 1880:1880 binnes/node-red-docker-sample:latest`
 12. Test your container.  
-    - You will not be able to launch the Editor, as this has been disabled in the sample project settings.js file - in a production Node-RED container you should not be able to alter the application, so the editor needs to be disabled.  Details of the Node-RED configuration options can be found in the [Node-RED documentation](https://nodered.org/docs/user-guide/runtime/configuration).  
+    - You will not be able to launch at the Editor on the base URL, as this has been modified in the sample project settings.js file.  The editor can be launched at **/admin**.  In a production Node-RED container you should not be able to alter the application, so the editor needs to be disabled.  This can be achieved by setting the .  Details of the Node-RED configuration options can be found in the [Node-RED documentation](https://nodered.org/docs/user-guide/runtime/configuration).  
     - You should be able to access the [/hello](http://localhost:1880/hello) endpoint
 13. If you have a Raspberry Pi or other ARM 32-bit or ARM 64-bit system you can also test that the ARM containers also work.
 
