@@ -23,6 +23,14 @@ Before you start working through the workshop please ensure you have all the pre
     - `echo 'export DOCKER_CLI_EXPERIMENTAL=enabled' >>~/.bashrc`
     - `sudo systemctl enable docker.service`
     - `sudo systemctl start docker.service`
+- [openssl](https://slproweb.com/products/Win32OpenSSL.html), which is needed to create SSL/TLS certificates.
+  - MacOS : OpenSSL is installed as part of MacOS
+  - Linux : OpenSSL is usually installed as part of the operating system, if not install the openssl package : `sudo apt-get install openssl`
+  - Windows: there are 2 options to run OpenSSL, using a binary install (easiest) or using the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10):
+    - **Binary install** : Download version 1.1.x from [here](https://slproweb.com/products/Win32OpenSSL.html) and install to default location.  If you get an error about missing **MSVCR120.dll** then you can download it from [the Microsoft support site](https://support.microsoft.com/en-us/help/3179560)
+    - **Windows subsystem for Linux** : Follow the instructions [here](https://docs.microsoft.com/en-us/windows/wsl/install-win10).  Select Debian as the Linux distribution, then when it is installed launch Debian then run the following commands at the Linux command prompt:
+      - `sudo apt-get update ; sudo apt-get upgrade`
+      - `sudo apt-get install openssl`
 
 ## Accounts needed
 

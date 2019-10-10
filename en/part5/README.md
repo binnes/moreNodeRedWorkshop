@@ -22,7 +22,7 @@ Store config in the environment
 
 Treat backing services as attached resources
 
-## V    - [Build, release, eun](BUILD.md)
+## V    - [Build, release, run](BUILD.md)
 
 Strictly separate build and run stages
 
@@ -53,6 +53,10 @@ Treat logs as event streams
 ## XII  - [Admin processes](ADMIN.md)
 
 Run admin/management tasks as one-off processes
+
+## [Run a local broker](broker/README.md)
+
+The example flow in this section connects to a MQTT broker.  This section shows how to run the Eclipse Mosquitto MQTT broker in Docker.
 
 ***
 *Quick links :*

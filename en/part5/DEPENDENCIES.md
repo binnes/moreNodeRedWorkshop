@@ -8,13 +8,17 @@
 
 *Explicitly declare and isolate dependencies*
 
-Node-RED is no different from Node.js applications here.  
+Node-RED is similar to Node.js applications here.  
 
-All dependencies are specified in the package.json file.  However, there are still '*hidden*' dependencies that can creep into a project when a package has some native dependencies that need to be installed in the host system running the application.
+All dependencies are specified in the package.json file.  When adding additional nodes to the Node-RED pallet, ensure they are added to the package.json file rather than using the pallet management feature within the editor.
+
+However, there are still '*hidden*' dependencies that can creep into a project when a package has some native dependencies that need to be installed in the host system running the application.
 
 To get round this the starter project has a Dockerfile which will build the source from the revision control system and build a container containing the application.  The Dockerfile captures all *hidden* dependencies.
 
-The provided Dockerfile in the starter project initially creates a build container to build the required software, then creates an applications image, copying built content from the build container.  This way a fully defined build environment is created and used.
+The provided Dockerfile in the starter project initially creates a build container to build the required software, then creates an applications image, copying built content from the build container.  This way a fully defined build environment is created and used, but the build tooling is not part of the production container image.
+
+The example below uses the new build feature in Docker, which makes it easier to create multi-architecture containers.
 
 ## Building the application
 
@@ -33,7 +37,7 @@ Before building the app we will add another few nodes to add an Web endpoint.
     - MacOS and Windows
       - Start Docker if it is not running
       - Click the Docker icon in the bottom notification window and select **settings** or **Preferences** then the **Daemon** section.  Enable Experimental features
-4. Open a command window.  You will use the new docker buildx command to build and push a multi-arch image to dockerhub.
+4. Open a command window.  You will use the new **docker buildx** command to build and push a multi-arch image to dockerhub.
 5. Before you can build a container you need to create a new builder.  Enter the command:  
   `docker buildx create --name NRbuilder --use`
 6. Check you have a builder running using command :  
@@ -48,10 +52,10 @@ Before building the app we will add another few nodes to add an Web endpoint.
   replace **binnes** with your docker username.  Here you see we are asking to build an image for 3 different architectures.  AMD/Intel 64 bit, ARM 64bit and ARM 32bit v7 (Raspberry Pi 3/4).  You can also add additional architectures, such as **linux/s390x** to add support for IBM Z systems or **linux/ppc64le** for IBM POWER systems
 10. Inspect the image using command  
   `docker buildx imagetools inspect docker.io/binnes/node-red-docker-sample:latest`
-11. Stop your local Node-RED using Ctrl-C then run the container using command :  
+11. Stop your local Node-RED using **Ctrl-C** in the command line window you started Node-RED in,  then run the container using command :  
   `docker run -dit -p 1880:1880 binnes/node-red-docker-sample:latest`
 12. Test your container.  
-    - You will not be able to launch at the Editor on the base URL, as this has been modified in the sample project settings.js file.  The editor can be launched at **/admin**.  In a production Node-RED container you should not be able to alter the application, so the editor needs to be disabled.  This can be achieved by setting the .  Details of the Node-RED configuration options can be found in the [Node-RED documentation](https://nodered.org/docs/user-guide/runtime/configuration).  
+    - You will not be able to launch at the Editor on the base URL, as this has been modified in the sample project settings.js file.  The editor can be launched at [**/admin**](http://localhost:1880/admin).  In a production Node-RED container you should not be able to alter the application, so the editor needs to be disabled.  This can be achieved by setting the .  Details of the Node-RED configuration options can be found in the [Node-RED documentation](https://nodered.org/docs/user-guide/runtime/configuration).  
     - You should be able to access the [/hello](http://localhost:1880/hello) endpoint
 13. If you have a Raspberry Pi or other ARM 32-bit or ARM 64-bit system you can also test that the ARM containers also work.
 

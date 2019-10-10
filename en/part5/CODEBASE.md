@@ -10,7 +10,15 @@
 
 First we need to decide what is a Node-RED application code base?
 
-Node-RED has the [**projects**](https://nodered.org/docs/user-guide/projects/) feature, which is turned off by default.  It allows Node-RED to work with a revision control system to manage the Node-RED flow and associated content.  This could be considered the application source?
+The Node-RED application is defined by a flow file and an optional credentials file.  However, the flow may require some additional nodes to be installed to the runtime and the flow also runs within a Node.js application, which is the Node-RED runtime.  This runtime can be customised and configured, so to fully capture a Node-RED application code base you need to capture the :
+
+- application flow and credential file
+- the package.json file, which captures all required Node.js and Node-RED node packages needed by the flow
+- the Node-RED runtime
+
+For this workshop a [starter git project](https://github.com/binnes/Node-RED-Docker) has been provided, containing a Node-RED runtime, customised to be managed by a cloud.
+
+Node-RED has the [**projects**](https://nodered.org/docs/user-guide/projects/) feature, which is turned off by default.  It allows Node-RED to work with a revision control system to manage the Node-RED flow and associated content.  This can be considered the application source?
 
 However, there are additional file needed if you want to be able to customise the runtime settings.
 
