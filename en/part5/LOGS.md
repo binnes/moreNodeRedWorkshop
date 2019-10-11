@@ -8,7 +8,9 @@
 
 *Treat logs as event streams*
 
-Node-RED outputs logs to stdout, so can any cloud environment or log service can capture the output.
+Node-RED outputs logs to stdout, so can any cloud environment or log service can capture the output.  
+
+If you use the **Debug** node to log messages, you need to configure the Debug node to log to the system console if you want to see the output ![system console](image/logConsole.png)
 
 When using Docker to run an application container the **logs** action can be used to display logs.  The **-f** option can be used to get a live stream of the log :
 

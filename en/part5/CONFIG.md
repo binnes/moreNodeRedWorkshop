@@ -123,7 +123,8 @@ You can see the environment variables, which will be substituted at runtime for 
 
 To run locally the environment variables need to be set before Node-RED is started, so they are available when Node-RED loads and runs the flow.
 
-For docker you can use the **-e** option to pass in environment variables.  So a docker file containing the above configuration might look like `docker run -dit -e MQTT_CLIENT_ID=nodeRED -e MQTT_HOST=localhost -e MQTT_PORT=8883 -e MQTT_PWD="passw0rd" -e MQTT_USER="mosquitto" -e MQTT_CA_CERT=c:\Users\brian\broker\certs\mqtt_ca.crt -p 1880:1880 --name dockerNR binnes/node-red-docker-sample:latest`
+For docker you can use the **-e** option to pass in environment variables.  For a docker application containing the above configuration, the command to run the container might look like:  
+ `docker run -dit -e MQTT_CLIENT_ID=nodeRED -e MQTT_HOST=localhost -e MQTT_PORT=8883 -e MQTT_PWD="passw0rd" -e MQTT_USER="mosquitto" -e MQTT_CA_CERT=c:\Users\brian\broker\certs\mqtt_ca.crt -v c:\Users\brian\broker:/mosquitto -p 1880:1880 --name dockerNR binnes/node-red-docker-sample:latest`
 
 ***
 **Part 5** - [Codebase](CODEBASE.md) - [Dependencies](DEPENDENCIES.md) - [**Config**](CONFIG.md) - [Backing services](BACKING.md) - [Build, release, run](BUILD.md) - [Processes](PROCESSES.md) - [Port binding](PORT.md) - [Concurrency](CONCURRENCY.md) - [Disposability](DISPOSABILITY.md) - [Dev/prod parity](PARITY.md) - [Logs](LOGS.md) - [Admin processes](ADMIN.md)

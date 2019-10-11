@@ -46,7 +46,7 @@ In this section you will fork a git repo, which is a starter template for a new 
 
 You can also pull changes from the repo, so if a team is working on the same Node-RED application they can push changes and the other team members can pull the changes.
 
-**Note**: There is an issue when running on Windows 10 - the git push is not passing the git credentials correctly.  If this is the case you can issue a `git push` command from a console window with the current directory the active git project directory : *user home dir*\\.node-red\\projects\\*repo name* 
+**Note**: There is an issue when running on Windows 10 - the git push is not passing the git credentials correctly.  If this is the case you can issue a `git push` command from a console window with the current directory the active git project directory : *user home dir*\\.node-red\\projects\\*repo name*
 
 ***
 **Part 5** - [**Codebase**](CODEBASE.md) - [Dependencies](DEPENDENCIES.md) - [Config](CONFIG.md) - [Backing services](BACKING.md) - [Build, release, run](BUILD.md) - [Processes](PROCESSES.md) - [Port binding](PORT.md) - [Concurrency](CONCURRENCY.md) - [Disposability](DISPOSABILITY.md) - [Dev/prod parity](PARITY.md) - [Logs](LOGS.md) - [Admin processes](ADMIN.md)
