@@ -4,7 +4,7 @@
 **Part 5** - [Codebase](CODEBASE.md) - [Dependencies](DEPENDENCIES.md) - [Config](CONFIG.md) - [Backing services](BACKING.md) - [Build, release, run](BUILD.md) - [Processes](PROCESSES.md) - [Port binding](PORT.md) - [**Concurrency**](CONCURRENCY.md) - [Disposability](DISPOSABILITY.md) - [Dev/prod parity](PARITY.md) - [Logs](LOGS.md) - [Admin processes](ADMIN.md)
 ***
 
-# VIII - Concurrency
+# VIII - [Concurrency](https://12factor.net/concurrency)
 
 *Scale out via the process model*
 

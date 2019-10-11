@@ -4,7 +4,7 @@
 **Part 5** - [Codebase](CODEBASE.md) - [Dependencies](DEPENDENCIES.md) - [Config](CONFIG.md) - [Backing services](BACKING.md) - [Build, release, run](BUILD.md) - [Processes](PROCESSES.md) - [Port binding](PORT.md) - [Concurrency](CONCURRENCY.md) - [Disposability](DISPOSABILITY.md) - [**Dev/prod parity**](PARITY.md) - [Logs](LOGS.md) - [Admin processes](ADMIN.md)
 ***
 
-# X - Dev/prod parity
+# X - [Dev/prod parity](https://12factor.net/dev-prod-parity)
 
 *Keep development, staging, and production as similar as possible*
 

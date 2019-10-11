@@ -4,7 +4,7 @@
 **Part 5** - [Codebase](CODEBASE.md) - [Dependencies](DEPENDENCIES.md) - [Config](CONFIG.md) - [Backing services](BACKING.md) - [**Build, release, run**](BUILD.md) - [Processes](PROCESSES.md) - [Port binding](PORT.md) - [Concurrency](CONCURRENCY.md) - [Disposability](DISPOSABILITY.md) - [Dev/prod parity](PARITY.md) - [Logs](LOGS.md) - [Admin processes](ADMIN.md)
 ***
 
-# V - Build, release, run
+# V - [Build, release, run](https://12factor.net/build-release-run)
 
 *Strictly separate build and run stages*
 
