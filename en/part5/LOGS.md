@@ -6,6 +6,16 @@
 
 # XI - Logs
 
+*Treat logs as event streams*
+
+Node-RED outputs logs to stdout, so can any cloud environment or log service can capture the output.
+
+When using Docker to run an application container the **logs** action can be used to display logs.  The **-f** option can be used to get a live stream of the log :
+
+`docker logs -f dockerNR`
+
+Logging options can be modified in the settings.js file to get the required logging level and output format.
+
 ***
 **Part 5** - [Codebase](CODEBASE.md) - [Dependencies](DEPENDENCIES.md) - [Config](CONFIG.md) - [Backing services](BACKING.md) - [Build, release, run](BUILD.md) - [Processes](PROCESSES.md) - [Port binding](PORT.md) - [Concurrency](CONCURRENCY.md) - [Disposability](DISPOSABILITY.md) - [Dev/prod parity](PARITY.md) - [**Logs**](LOGS.md) - [Admin processes](ADMIN.md)
 ***

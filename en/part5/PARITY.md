@@ -6,6 +6,12 @@
 
 # X - Dev/prod parity
 
+*Keep development, staging, and production as similar as possible*
+
+Node-RED is no different from Node.js or many other popular development languages/environments in this aspect.
+
+Adopting modern, cloud native practices and tooling will help here.
+
 ***
 **Part 5** - [Codebase](CODEBASE.md) - [Dependencies](DEPENDENCIES.md) - [Config](CONFIG.md) - [Backing services](BACKING.md) - [Build, release, run](BUILD.md) - [Processes](PROCESSES.md) - [Port binding](PORT.md) - [Concurrency](CONCURRENCY.md) - [Disposability](DISPOSABILITY.md) - [**Dev/prod parity**](PARITY.md) - [Logs](LOGS.md) - [Admin processes](ADMIN.md)
 ***
