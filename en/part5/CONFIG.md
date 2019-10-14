@@ -123,8 +123,18 @@ You can see the environment variables, which will be substituted at runtime for 
 
 To run locally the environment variables need to be set before Node-RED is started, so they are available when Node-RED loads and runs the flow.
 
-For docker you can use the **-e** option to pass in environment variables.  For a docker application containing the above configuration, the command to run the container might look like:  
- `docker run -dit -e MQTT_CLIENT_ID=nodeRED -e MQTT_HOST=localhost -e MQTT_PORT=8883 -e MQTT_PWD="passw0rd" -e MQTT_USER="mosquitto" -e MQTT_CA_CERT=c:\Users\brian\broker\certs\mqtt_ca.crt -v c:\Users\brian\broker:/mosquitto -p 1880:1880 --name dockerNR binnes/node-red-docker-sample:latest`
+For docker you can use the **-e** option to pass in environment variables.  For a docker application containing the above configuration, the command to run the container might look like:
+
+ `docker run -dit -e MQTT_CLIENT_ID=nodeRED -e MQTT_HOST=mqttBroker -e MQTT_PORT=8883 -e MQTT_PWD="passw0rd" -e MQTT_USER="mosquitto" -e MQTT_CA_CERT=/mosquitto/certs/mqtt_ca.crt --add-host mqttBroker:[IP address of host] -v [localhost of broker directory within part 5 directory of this repo]:/mosquitto -p 1880:1880 --name dockerNR [your docker hub username]/node-red-docker-sample:latest`
+
+Notice:
+
+- you need to provide the values for content in square brackets in the above command : **[ ]** 
+- all the environment variables are set with the **-e** option
+- the directory containing the certificates is mapped to a local directory **/mosquitto** within the container using the **-v** option.  The **MQTT_CA_CERT** environment variable references the root certificate authority certificate from within this directory.
+- The **mqttBroker** network address is added to the hosts file within the container using the **--add-host** option.  The **MQTT_HOST** environment variable is set to **mqttBroker**, so requires the container can find the network address using hostname **mqttBroker**.  You need to know the IP address of your host system when using this option.  There are many ways to get the IP address of the host system, from using GUI tools on the desktop to command line options.  Here are options that work on the command line:
+  - on Linux and MacOS you can use **ifconfig** to get the IP address
+  - on Windows 10 you can use **ipconfig** to get the IP address
 
 ***
 **Part 5** - [Codebase](CODEBASE.md) - [Dependencies](DEPENDENCIES.md) - [**Config**](CONFIG.md) - [Backing services](BACKING.md) - [Build, release, run](BUILD.md) - [Processes](PROCESSES.md) - [Port binding](PORT.md) - [Concurrency](CONCURRENCY.md) - [Disposability](DISPOSABILITY.md) - [Dev/prod parity](PARITY.md) - [Logs](LOGS.md) - [Admin processes](ADMIN.md)

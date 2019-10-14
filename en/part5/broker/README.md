@@ -41,6 +41,16 @@ When you have finished with the broker, you can remove the container with comman
 
 If you want to start the broker again you will need to delete all content from the **passwd** file in the **broker/config** directory, as new keys will be generated when a new container is started.  You will then need to add users to the container.
 
+## Accessing the broker from another container
+
+One issue you will quickly run into when using containers over local installs, is there isn't a flat network across containers running on the same system.  Each container has an isolated network, and ports exposed to the underlying host system with the **-p** option are not available as a local port within other containers running on the same host.
+
+The legacy way of getting round this was to use the **link** option when running a container to be able to access other containers omn the same host using the container name, but whilst this still works at time of creating this material, Docker advises that the feature may be removed.
+
+Docker has the ability to set up complex networking to isolate and manage traffic, but in this workshop we want to keep things simple, so the mqtt broker will export the port to the host system (port 8883), then other containers will access the mqtt broker as a remote system.  To achieve this you need to know the host system IP address, then use the --add-host command line argument when running a container to set an entry in the container hosts file to map hostname mqttBroker to the host network address, where the mqtt broker can be accessed on exported port 8883.  
+
+To allow the SSL/TLS certificates to be verified the host name **localhost** can be used, for applications running natively on the host or **mqttBroker** for applications running in containers on the same host, launched with the **--add-host** option.  File v3.ext is where the hostnames that will be verified by the certificate are configured.
+
 ***
 *Quick links :*
 [Home](/README.md) - [Part 1](../../part1/README.md) - [Part 2](../../part2/README.md) - [Part 3](../../part3/README.md) - [Part 4](../../part4/README.md) - [**Part 5**](../../part5/README.md)
