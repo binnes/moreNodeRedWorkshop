@@ -129,7 +129,7 @@ For docker you can use the **-e** option to pass in environment variables.  For 
 
 Notice:
 
-- you need to provide the values for content in square brackets in the above command : **[ ]** 
+- you need to provide the values for content in square brackets in the above command : **[ ]**
 - all the environment variables are set with the **-e** option
 - the directory containing the certificates is mapped to a local directory **/mosquitto** within the container using the **-v** option.  The **MQTT_CA_CERT** environment variable references the root certificate authority certificate from within this directory.
 - The **mqttBroker** network address is added to the hosts file within the container using the **--add-host** option.  The **MQTT_HOST** environment variable is set to **mqttBroker**, so requires the container can find the network address using hostname **mqttBroker**.  You need to know the IP address of your host system when using this option.  There are many ways to get the IP address of the host system, from using GUI tools on the desktop to command line options.  Here are options that work on the command line:
