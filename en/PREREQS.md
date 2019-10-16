@@ -4,12 +4,14 @@
 
 # Workshop prerequisites
 
-Before you start working through the workshop please ensure you have all the prerequisites installed to be able to complete the required work.  This page sets out all the software you need to have installed on your laptop or workstation and all accounts you need to have setup.
+To work through the workshop you will need a laptop with an up to date version of Linux, Mac OS or Windows.
+
+Before you start working through the workshop please ensure you have all the prerequisites installed to be able to complete the required work:
 
 ## Software to be installed
 
 - [Node.js](https://nodejs.org/en/) v8 or current supported level of Node.JS
-- [Python]() v2.7 - Python 3.x not supported for building Node.js native modules
+- [Python](https://www.python.org) v2.7 - Python 3.x is not supported for building Node.js native modules
 - Build tools needed for building Node.js native modules
   - Linux : `apt-get install build-essential` or equivalent on your Linux distribution
   - MacOS : `xcode-select --install`
@@ -23,7 +25,7 @@ Before you start working through the workshop please ensure you have all the pre
     - `echo 'export DOCKER_CLI_EXPERIMENTAL=enabled' >>~/.bashrc`
     - `sudo systemctl enable docker.service`
     - `sudo systemctl start docker.service`
-- [openssl](https://slproweb.com/products/Win32OpenSSL.html), which is needed to create SSL/TLS certificates.
+- *Optional* [openssl](https://slproweb.com/products/Win32OpenSSL.html), which is needed to create SSL/TLS certificates.
   - MacOS : OpenSSL is installed as part of MacOS
   - Linux : OpenSSL is usually installed as part of the operating system, if not install the openssl package : `sudo apt-get install openssl`
   - Windows: there are 2 options to run OpenSSL, using a binary install (easiest) or using the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10):
@@ -34,11 +36,8 @@ Before you start working through the workshop please ensure you have all the pre
 
 ## Accounts needed
 
-- [IBM Cloud](https://cloud.ibm.com) free IBM Cloud lite account
 - [Docker Hub](https://hub.docker.com) account
 - [GitHub](https://github.com) account
-- [Twitter developer](https://developer.twitter.com) account
-- [MapBox Developer](https://www.mapbox.com/developer-network/#join_dev_net) account (Optional)
 
 ***
 *Quick links :*
