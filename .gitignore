@@ -1,3 +1,4 @@
 *.code-workspace
 .markdownlint.*
 *.vscode
+.DS_Store
