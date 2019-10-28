@@ -55,7 +55,7 @@ Before building the app we will add another few nodes to add an Web endpoint.
 11. Stop your local Node-RED using **Ctrl-C** in the command line window you started Node-RED in,  then run the container using command :  
   `docker run -dit -p 1880:1880 binnes/node-red-docker-sample:latest`
 12. Test your container.  
-    - You will not be able to launch at the Editor on the base URL, as this has been modified in the sample project settings.js file.  The editor can be launched at [**/admin**](http://localhost:1880/admin).  In a production Node-RED container you should not be able to alter the application, so the editor needs to be disabled.  This can be achieved by setting the .  Details of the Node-RED configuration options can be found in the [Node-RED documentation](https://nodered.org/docs/user-guide/runtime/configuration).  
+    - You will not be able to launch at the Editor on the base URL, as this has been modified in the sample project settings.js file.  The editor can be launched at [**/admin**](http://localhost:1880/admin).  In a production Node-RED container you should not be able to alter the application, so the editor needs to be disabled.  This can be achieved by setting the **httpAdminRoot** property in the **settings.js** file to **false**.  Details of the Node-RED configuration options can be found in the [Node-RED documentation](https://nodered.org/docs/user-guide/runtime/configuration).  
     - You should be able to access the [/hello](http://localhost:1880/hello) endpoint
 13. If you have a Raspberry Pi or other ARM 32-bit or ARM 64-bit system you can also test that the ARM containers also work.
 
