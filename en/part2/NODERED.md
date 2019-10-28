@@ -4,7 +4,7 @@
 **Part 2** - [**Local Node-RED**](NODERED.md) - [**Web and REST APIs**](API.md) - [Calling an API from Node-RED](CALLING_API.md) - [Implementing an API in Node-RED](CREATING_API.md) - [API Practical](API_PRACTICAL.md)
 ***
 
-# Install Node-RED locally
+# Run Node-RED locally
 
 You can install Node-RED to run locally on your laptop or workstation.  In this section you will run Node-RED locally.
 

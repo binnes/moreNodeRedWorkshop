@@ -6,6 +6,17 @@
 
 This section looks at creating native cloud applications using Node-RED and how the [12-factor app](https://12factor.net) methodology can be applied to Node-RED.
 
+## Setup for part 5
+
+To complete the practical work in this section you will be working on your local system, so you need to have all the [prerequisites](../PREREQS.md) installed.
+
+1. Run Node-RED locally on your laptop
+    The instructions in this section assume you have started Node-RED on your local system at least once, which populates the .node-red directory in your user's home directory.  If not please start it now:
+    - In a command window (as your local user - NOT admin) enter command ```node-red```
+    - Once Node-RED is running you can stop the server by holding the Ctrl key then pressing the c key (**Ctrl-c**)
+2. [Run a local broker](broker/README.md)
+    The example flow in this section connects to a MQTT broker.  The linked section shows how to run the Eclipse Mosquitto MQTT broker in Docker on your local system.
+
 ## I    - [Codebase](CODEBASE.md)
 
 One codebase tracked in revision control, many deploys
@@ -53,10 +64,6 @@ Treat logs as event streams
 ## XII  - [Admin processes](ADMIN.md)
 
 Run admin/management tasks as one-off processes
-
-## [Run a local broker](broker/README.md)
-
-The example flow in this section connects to a MQTT broker.  This section shows how to run the Eclipse Mosquitto MQTT broker in Docker.
 
 ***
 *Quick links :*

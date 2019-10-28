@@ -32,7 +32,7 @@ To see all environment variable that are set, simple enter command `set` on Linu
 
 ## MQTT node config
 
-In this section you will connect to the MQTT broker running in docker on your workstation.  If it is not running start it now and ensure you have the user password created, then follow the steps:
+In this section you will connect to the MQTT broker running in docker on your workstation.  If it is not running [start it now](broker/README.md) and ensure you have the user password created, then follow the steps:
 
 1. Import the following flow :
 
@@ -125,7 +125,7 @@ To run locally the environment variables need to be set before Node-RED is start
 
 For docker you can use the **-e** option to pass in environment variables.  For a docker application containing the above configuration, the command to run the container might look like:
 
- `docker run -dit -e MQTT_CLIENT_ID=nodeRED -e MQTT_HOST=mqttBroker -e MQTT_PORT=8883 -e MQTT_PWD="passw0rd" -e MQTT_USER="mosquitto" -e MQTT_CA_CERT=/mosquitto/certs/mqtt_ca.crt --add-host mqttBroker:[IP address of host] -v [localhost of broker directory within part 5 directory of this repo]:/mosquitto -p 1880:1880 --name dockerNR [your docker hub username]/node-red-docker-sample:latest`
+ `docker run -dit -e MQTT_CLIENT_ID=nodeRED -e MQTT_HOST=mqttBroker -e MQTT_PORT=8883 -e MQTT_PWD="passw0rd" -e MQTT_USER="mosquitto" -e MQTT_CA_CERT=/mosquitto/certs/mqtt_ca.crt --add-host mqttBroker:[IP address of host] -v [local path of broker directory contained in the part 5 directory of this repo]:/mosquitto -p 1880:1880 --name dockerNR [your docker hub username]/node-red-docker-sample:latest`
 
 Notice:
 
