@@ -6,9 +6,9 @@
 
 # Install Node-RED locally
 
-You can install Node-RED to run locally on your laptop or workstation.  In this section you will setup Node-RED to run locally.  The following sections of part 2 assume you will work locally.
+You can install Node-RED to run locally on your laptop or workstation.  In this section you will run Node-RED locally.
 
-1. Open up a command prompt and enter command `sudo npm install -g --unsafe-perm node-red` to install Node-RED.  On Windows run the command `npm install -g --unsafe-perm node-red` within a command window run as Administrator
+1. Ensure you installed Node-RED as directed in the course [prerequisites](../PREREQS.md)
 2. To run Node-RED on your system open up a command window and enter command `node-red`.  This will start the Node-RED runtime.  You can access it using the browser on your system and navigating to address [localhost:1880](http://localhost:1880)
 
 ***

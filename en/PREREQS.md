@@ -16,6 +16,9 @@ Before you start working through the workshop please ensure you have all the pre
   - Linux : `apt-get install build-essential` or equivalent on your Linux distribution
   - MacOS : `xcode-select --install`
   - Windows : `npm install --global --production windows-build-tools` from an elevated PowerShell or CMD.exe run as Administrator
+- [Node-RED]() - a local install of Node-RED
+  - MacOS and Linux - Open up a command prompt and enter command `sudo npm install -g --unsafe-perm node-red` to install Node-RED.  
+  - Windows - In an command window run as Administrator run the command `npm install -g --unsafe-perm node-red`
 - [Docker](https://www.docker.com) desktop or Docker community edition - version 19.03 or higher needs to be installed
   - MacOS and Windows : install Docker Desktop
   - Linux :
