@@ -38,7 +38,7 @@ In this section you will fork a git repo, which is a starter template for a new 
     - copy the Git repo URL from your git repo github page: ![github page](image/copyGitURL.png)
     - press the Clone project button when all the details have been completed - leave the Credentials encryption key field blank ![Clone repo](image/cloneRepo.png)
 9. Drag an inject and debug node onto the sheet and connect them to create a basic flow then deploy the changes ![basic flow](image/basicFlow.png)
-10. Switch to the project section in the side panel, where you can see the flows.json file has uncommitted local changes.  Move your mouse over the entry and press the **+** button to stage the change ![stage change](image/gitStage.png)
+10. Switch to the project history section in the side panel, where you can see the flows.json file has uncommitted local changes.  Move your mouse over the entry and press the **+** button to stage the change ![stage change](image/gitStage.png)
 11. The flows.json file is now ready to be committed.  Press the commit button then enter a commit message **basic flow** to commit the flow change  
   ![commit](image/gitCommit.png)
 12. Switch to the **Commit History** section of the project panel.  Here you can see the last commit and also that the local git branch is 1 commit ahead of the remote master.  Click the up arrow to open the Manage remote branch panel ![commit history](image/commitHistory.png)

@@ -24,7 +24,13 @@ To generate your own certificates :
 
     ```docker run -itd -p 8883:8883 -v <full path to broker directory>/broker:/mosquitto --name mqttBroker eclipse-mosquitto```
 
-    replace the `<full path to broker directory>` with the **fully qualified path** of the directory containing the broker directory, cloned from this repo.  Use the **/** character to separate directories on all platforms including Windows.  Do not include the drive letter on Windows platforms.
+    replace the `<full path to broker directory>` with the **fully qualified path** of the directory containing the broker directory, cloned from this repo.
+
+    e.g. On windows, if I cloned the repository into my home directory **c:\Users\brian** then the command would be:  
+    ```docker run -itd -p 8883:8883 -v c:\Users\brian\moreNodeRedWorkshop\en\part5\broker:/mosquitto --name mqttBroker eclipse-mosquitto```
+
+    On Mac or Linux, if I cloned the repository into home directory **/Users/brian** then the command would be:  
+    ```docker run -itd -p 8883:8883 -v /Users/brian/moreNodeRedWorkshop/en/part5/broker:/mosquitto --name mqttBroker eclipse-mosquitto```
 
 4. Create a broker user in the container.  For this example the username is **mosquitto** with password **passw0rd**:
 
