@@ -21,9 +21,9 @@ As we want to turn on security, so we can demonstrate how to get Node-RED node c
     - Windows - in a command window run the bat file `makeCerts.bat`  *Note: the .bat file assumes the default install location for SSL : c:\OpenSSL-Win64\bin\openssl.exe.  You need to modify the file if you installed SSL to a different location*
 3. Start the MQTT Mosquitto container:
 
-    ```docker run -itd -p 8883:8883 -v <path to broker directory>\broker:/mosquitto --name mqttBroker eclipse-mosquitto```
+    ```docker run -itd -p 8883:8883 -v <full path to broker directory>/broker:/mosquitto --name mqttBroker eclipse-mosquitto```
 
-    replace the `<path to broker directory>` with the fully qualified path of the directory containing the broker directory, cloned from this repo.
+    replace the `<full path to broker directory>` with the **fully qualified path** of the directory containing the broker directory, cloned from this repo.  Use the **/** character to separate directories on all platforms including Windows.  Do not include the drive letter on Windows platforms.
 
 4. Create a broker user in the container.  For this example the username is **mosquitto** with password **passw0rd**:
 
