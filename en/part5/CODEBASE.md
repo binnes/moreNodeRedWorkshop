@@ -29,7 +29,7 @@ In this section you will fork a git repo, which is a starter template for a new 
 3. Open the git settings  
   ![settings](image/gitSettings.png)
 4. Select **Developer settings** then **Personal access tokens** then **Generate new token**.  Give the token a use, select all scopes except `admin:enterprise` and `admin:gpg.key` scope then **Generate token** ![generate token](image/gitPAT.png)
-5. On your system edit file .node-red/setting.js in your home directory.  At the bottom of the file change the projects setting to `enabled : true` ![Enable Node-RED projects](image/enableProjectFeature.png)
+5. On your system edit file .node-red/settings.js in your home directory.  At the bottom of the file change the projects setting to `enabled : true` ![Enable Node-RED projects](image/enableProjectFeature.png)
 6. Start Node-RED running locally on your system.  If it is already running stop it by entering **Ctrl-c** in the command window where it is running.  Use command `node-red` to start Node-RED
 7. Open a browser to access your local Node-RED runtime on [http://localhost:1880](http://localhost:1880) and you should see a Projects wizard, as you've just enabled the project feature in the Node-RED editor. ![project wizard](image/projectWizard.png)
 8. Select the Clone Repository.
