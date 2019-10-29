@@ -16,7 +16,7 @@ As we want to turn on security, so we can demonstrate how to get Node-RED node c
   
     ```git clone git@github.com:binnes/moreNodeRedWorkshop.git```
 
-2. Certificates for this workshop are provided in this repo.  If you use the service names used in this course material you can use the provided certificates.  If you want to use your own names then use the provided files to create your own certificates (it is recommended that you use the provided certificates).  
+2. Certificates for this workshop are provided in this repo.  If you use the service names used in this course material you can use the provided certificates.  If you want to use your own names then use the instructions below to create your own certificates (it is recommended that you use the provided certificates).  
 To generate your own certificates :  
     - Linux/MacOS - You will need to make the script file executable with command `chmod +x makeCerts.sh`, then you can run the script using command `./makeCerts.sh`
     - Windows - in a command window run the bat file `makeCerts.bat`  *Note: the .bat file assumes the default install location for SSL : c:\OpenSSL-Win64\bin\openssl.exe.  You need to modify the file if you installed SSL to a different location*
