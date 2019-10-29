@@ -37,7 +37,10 @@ Before building the app we will add another few nodes to add an Web endpoint.
     - MacOS and Windows
       - Start Docker if it is not running
       - Click the Docker icon in the bottom notification window and select **settings** or **Preferences** then the **Daemon** section.  Enable Experimental features
-4. Open a command window.  You will use the new **docker buildx** command to build and push a multi-arch image to dockerhub.
+4. Open a command window then :
+    - navigate to your home directory
+    - navigate to the **.node-red/projects/Node-RED-Docker** subdirectory. This directory should contain the Dockerfile.  
+    You will use the new **docker buildx** command to build and push a multi-arch image to dockerhub.
 5. Before you can build a container you need to create a new builder.  Enter the command:  
   `docker buildx create --name NRbuilder --use`
 6. Check you have a builder running using command :  
