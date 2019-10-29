@@ -16,7 +16,7 @@ As we want to turn on security, so we can demonstrate how to get Node-RED node c
   
     ```git clone git@github.com:binnes/moreNodeRedWorkshop.git```
 
-2. Certificates for this workshop are provided in this repo.  If you use the service names used in this course material you can use the provided certificates.  If you want to use your own names then use the instructions below to create your own certificates (it is recommended that you use the provided certificates).  
+2. *Optional* - Certificates for this workshop are provided in this repo.  If you use the service names used in this course material you can use the provided certificates.  If you want to use your own names then use the instructions below to create your own certificates (it is recommended that you use the provided certificates).  
 To generate your own certificates :  
     - Modify the makeCerts scripts and/or v3.ext file to change the content of the certificates if needed.  The assumption here is you are familiar with SSL certificates and the fields within them.  If not stick to the provided certificates.
     - Linux/MacOS - You will need to make the script file executable with command `chmod +x makeCerts.sh`, then you can run the script using command `./makeCerts.sh`
