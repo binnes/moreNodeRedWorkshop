@@ -22,13 +22,20 @@ The example below uses the new build feature in Docker, which makes it easier to
 
 ## Building the application
 
-Before building the app we will add another few nodes to add an Web endpoint.
+Before building the app we will add another few nodes to add a Web endpoint, so we can test an app when we have Node-RED deployed in Docker.
 
 1. Import the following JSON to add the **/hello** endpoint:
 
-    ```JSON
-    [{"id":"55dd0376.f7c64c","type":"http in","z":"3af82246.3634ae","name":"","url":"/hello","method":"get","upload":false,"swaggerDoc":"","x":130,"y":420,"wires":[["c656aba7.944288"]]},{"id":"c2380ca8.0463","type":"http response","z":"3af82246.3634ae","name":"","statusCode":"","headers":{},"x":470,"y":420,"wires":[]},{"id":"c656aba7.944288","type":"change","z":"3af82246.3634ae","name":"","rules":[{"t":"set","p":"payload","pt":"msg","to":"{\"text\":\"Hello\"}","tot":"json"}],"action":"","property":"","from":"","to":"","reg":false,"x":300,"y":420,"wires":[["c2380ca8.0463"]]}]
-    ```
+    - to import the flow select the main menu (☰), then the import option from the menu
+        ![main menu](image/mainMenu.png)
+    - copy and paste the JSON below into the Import nodes window, then press the **Import** button to import the nodes
+        ![import nodes](image/importNodes.png)
+
+      ```JSON
+      [{"id":"55dd0376.f7c64c","type":"http in","z":"3af82246.3634ae","name":"","url":"/hello","method":"get","upload":false,"swaggerDoc":"","x":130,"y":420,"wires":[["c656aba7.944288"]]},{"id":"c2380ca8.0463","type":"http response","z":"3af82246.3634ae","name":"","statusCode":"","headers":{},"x":470,"y":420,"wires":[]},{"id":"c656aba7.944288","type":"change","z":"3af82246.3634ae","name":"","rules":[{"t":"set","p":"payload","pt":"msg","to":"{\"text\":\"Hello\"}","tot":"json"}],"action":"","property":"","from":"","to":"","reg":false,"x":300,"y":420,"wires":[["c2380ca8.0463"]]}]
+      ```
+
+    - press the **Deploy** button to make the new nodes live (you can now access the new endpoint running on your local Node-RED instance [http://localhost:1880/hello](http://localhost:1880/hello)
 
 2. Commit and push the change to git
 3. Enable experimental features in Docker:
@@ -36,7 +43,7 @@ Before building the app we will add another few nodes to add an Web endpoint.
       - Environment variable **DOCKER_CLI_EXPERIMENTAL** should be set to **enabled**
     - MacOS and Windows
       - Start Docker if it is not running
-      - Click the Docker icon in the bottom notification window and select **settings** or **Preferences** then the **Daemon** section.  Enable Experimental features
+      - Click the Docker icon (usually in bottom notification popup on Windows, top menu bar on MacOS) and select **settings** or **Preferences** then the **Daemon** section.  Enable Experimental features
 4. Open a command window then :
     - navigate to your home directory
     - navigate to the **.node-red/projects/Node-RED-Docker** subdirectory. This directory should contain the Dockerfile.  
