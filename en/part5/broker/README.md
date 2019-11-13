@@ -33,9 +33,11 @@ To generate your own certificates :
     On Mac or Linux, if I cloned the repository into home directory **/Users/brian** then the command would be:  
     ```docker run -itd -p 8883:8883 -v /Users/brian/moreNodeRedWorkshop/en/part5/broker:/mosquitto --name mqttBroker eclipse-mosquitto```
 
-4. Create a broker user in the container.  For this example the username is **mosquitto** with password **passw0rd**:
+4. (OPTIONAL) If you want to create additional broker users in the container.  There is already a default user created, the username is **mosquitto** with password **passw0rd**:
 
-    ```docker exec mqttBroker mosquitto_passwd -b /mosquitto/config/passwd mosquitto passw0rd```
+    ```docker exec mqttBroker mosquitto_passwd -b /mosquitto/config/passwd username userpassword```
+
+    replacing *username* and *userpassword* as required
 
 5. If you want to watch the mosquitto logs you can with command:
 
@@ -46,8 +48,6 @@ When you have finished with the broker, you can remove the container with comman
 ```docker kill mqttBroker```
 
 ```docker rm mqttBroker```
-
-If you want to start the broker again you will need to delete all content from the **passwd** file in the **broker/config** directory, as new keys will be generated when a new container is started.  You will then need to add users to the container.
 
 ## Accessing the broker from another container
 
