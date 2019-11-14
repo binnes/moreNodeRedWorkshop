@@ -58,7 +58,7 @@ Before building the app we will add another few nodes to add a Web endpoint, so 
 8. Now the builder is up and running you can build a multi-arch container and push it to your dockerhub account.  First ensure you are logged into dockerhub :  
   `docker login`
 9. Build and push the image :  
-  `docker buildx build --platform linux/amd64,linux/arm/v7 -t binnes/node-red-docker-sample --push .`  
+  `docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t binnes/node-red-docker-sample --push .`  
   replace **binnes** with your docker username.  Here you see we are asking to build an image for 3 different architectures.  AMD/Intel 64 bit, ARM 64bit and ARM 32bit v7 (Raspberry Pi 3/4).  You can also add additional architectures, such as **linux/s390x** to add support for IBM Z systems or **linux/ppc64le** for IBM POWER systems
 10. Inspect the image using command  
   `docker buildx imagetools inspect docker.io/binnes/node-red-docker-sample:latest`
