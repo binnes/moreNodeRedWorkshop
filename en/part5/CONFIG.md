@@ -124,9 +124,9 @@ You can see the environment variables, which will be substituted at runtime for 
 To run locally the environment variables need to be set before Node-RED is started, so they are available when Node-RED loads and runs the flow.  If you want to test this locally:
 
 - stop node-RED (Ctrl-C)
-- set the environment variables
-    - Windows : SET MQTT_HOST=localhost
-    - Linux and MacOS : export MQTT_HOST=localhost
+- set the environment variables:
+  - Windows : SET MQTT_HOST=localhost
+  - Linux and MacOS : export MQTT_HOST=localhost
 - you need to set all the environment variables (MQTT_HOST, MQTT_PORT, MQTT_CLIENT_ID, MQTT_CA_CERT, MQTT_USER and MQTT_PWD)
 - start node-RED
 
