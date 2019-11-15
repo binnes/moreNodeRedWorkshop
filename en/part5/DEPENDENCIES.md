@@ -50,11 +50,11 @@ Before building the app we will add another few nodes to add a Web endpoint, so 
     You will use the new **docker buildx** command to build and push a multi-arch image to dockerhub.
 5. Before you can build a container you need to create a new builder.  Enter the command:  
   `docker buildx create --name NRbuilder --use`
-6. Check you have a builder running using command :  
-  `docker buildx ls`
-7. Inspect the builder with command :  
+6. Inspect the builder with command :  
   `docker buildx inspect --bootstrap`  
-  which will also start the builder if it is not running
+  which will also start the builder if it is not running.  The output of this command will show the target architectures supported by the builder.
+7. You can check you have a builder running using the **ls** command, which also outputs the list of supported architectures :  
+  `docker buildx ls`
 8. Now the builder is up and running you can build a multi-arch container and push it to your dockerhub account.  First ensure you are logged into dockerhub :  
   `docker login`
 9. Build and push the image :  
