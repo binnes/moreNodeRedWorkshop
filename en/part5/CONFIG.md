@@ -121,20 +121,38 @@ and flow credentials file:
 
 You can see the environment variables, which will be substituted at runtime for the values contained in the environment variables.
 
-To run locally the environment variables need to be set before Node-RED is started, so they are available when Node-RED loads and runs the flow.
+To run locally the environment variables need to be set before Node-RED is started, so they are available when Node-RED loads and runs the flow.  If you want to test this locally:
 
-For docker you can use the **-e** option to pass in environment variables.  For a docker application containing the above configuration, the command to run the container might look like:
+- stop node-RED (Ctrl-C)
+- set the environment variables
+    - Windows : SET MQTT_HOST=localhost
+    - Linux and MacOS : export MQTT_HOST=localhost
+- you need to set all the environment variables (MQTT_HOST, MQTT_PORT, MQTT_CLIENT_ID, MQTT_CA_CERT, MQTT_USER and MQTT_PWD)
+- start node-RED
 
- `docker run -dit -e MQTT_CLIENT_ID=nodeRED -e MQTT_HOST=mqttBroker -e MQTT_PORT=8883 -e MQTT_PWD="passw0rd" -e MQTT_USER="mosquitto" -e MQTT_CA_CERT=/mosquitto/certs/mqtt_ca.crt --add-host mqttBroker:[IP address of host] -v [local path of broker directory contained in the part 5 directory of this repo]:/mosquitto -p 1880:1880 --name dockerNR [your docker hub username]/node-red-docker-sample:latest`
+## Updating Docker image
 
-Notice:
+To get the updated flow running in Docker you need to rebuild and push the updated Node-RED application.
 
-- you need to provide the values for content in square brackets in the above command : **[ ]**
-- all the environment variables are set with the **-e** option
-- the directory containing the certificates is mapped to a local directory **/mosquitto** within the container using the **-v** option.  The **MQTT_CA_CERT** environment variable references the root certificate authority certificate from within this directory.
-- The **mqttBroker** network address is added to the hosts file within the container using the **--add-host** option.  The **MQTT_HOST** environment variable is set to **mqttBroker**, so requires the container can find the network address using hostname **mqttBroker**.  You need to know the IP address of your host system when using this option.  There are many ways to get the IP address of the host system, from using GUI tools on the desktop to command line options.  Here are options that work on the command line:
-  - on Linux and MacOS you can use **ifconfig** to get the IP address
-  - on Windows 10 you can use **ipconfig** to get the IP address
+1. Go to the github integration tab in the Node-RED editor and commit and push the latest version of your flow
+2. Build the container with the command:  
+    `docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t [insert your dockerhub username here]/node-red-docker-sample --push .`  
+    Customise the command as required
+3. If running stop the existing Node-RED docker instance and remove it.  You cannot have 2 instances of a DOcker container with the same name, so if the previous instance still exists, then you won't be able to deploy a new instance.
+    - `docker kill dockerNR`
+    - `docker rm dockerNR`
+4. Run the new container.  For docker you can use the **-e** option to pass in environment variables.  For a docker application containing the above configuration, the command to run the container might look like:
+
+    `docker run -dit -e MQTT_CLIENT_ID=nodeRED -e MQTT_HOST=mqttBroker -e MQTT_PORT=8883 -e MQTT_PWD="passw0rd" -e MQTT_USER="mosquitto" -e MQTT_CA_CERT=/mosquitto/certs/mqtt_ca.crt --add-host mqttBroker:[IP address of host] -v [local path of broker directory contained in the part 5 directory of this repo]:/mosquitto -p 1880:1880 --name dockerNR [your docker hub username]/node-red-docker-sample:latest`
+
+    Notice:
+
+    - you need to provide the values for content in square brackets in the above command : **[ ]**
+    - all the environment variables are set with the **-e** option
+    - the directory containing the certificates is mapped to a local directory **/mosquitto** within the container using the **-v** option.  The **MQTT_CA_CERT** environment variable references the root certificate authority certificate from within this directory.
+    - The **mqttBroker** network address is added to the hosts file within the container using the **--add-host** option.  The **MQTT_HOST** environment variable is set to **mqttBroker**, so requires the container can find the network address using hostname **mqttBroker**.  You need to know the IP address of your host system when using this option.  There are many ways to get the IP address of the host system, from using GUI tools on the desktop to command line options.  Here are options that work on the command line:
+    - on Linux and MacOS you can use **ifconfig** to get the IP address
+    - on Windows 10 you can use **ipconfig** to get the IP address
 
 ***
 **Part 5** - [Codebase](CODEBASE.md) - [Dependencies](DEPENDENCIES.md) - [**Config**](CONFIG.md) - [Backing services](BACKING.md) - [Build, release, run](BUILD.md) - [Processes](PROCESSES.md) - [Port binding](PORT.md) - [Concurrency](CONCURRENCY.md) - [Disposability](DISPOSABILITY.md) - [Dev/prod parity](PARITY.md) - [Logs](LOGS.md) - [Admin processes](ADMIN.md)

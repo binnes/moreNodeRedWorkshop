@@ -43,7 +43,7 @@ Before building the app we will add another few nodes to add a Web endpoint, so 
       - Environment variable **DOCKER_CLI_EXPERIMENTAL** should be set to **enabled**
     - MacOS and Windows
       - Start Docker if it is not running
-      - Click the Docker icon (usually in bottom notification popup on Windows, top menu bar on MacOS) and select **settings** or **Preferences** then the **Daemon** section.  Enable Experimental features
+      - Click the Docker icon (usually in bottom notification popup on Windows, top menu bar on MacOS) and select **settings** or **Preferences** then the **Command Line** section.  Enable Experimental features
 4. Open a command window then :
     - navigate to your home directory
     - navigate to the **.node-red/projects/Node-RED-Docker** subdirectory. This directory should contain the Dockerfile.  
