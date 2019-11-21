@@ -12,7 +12,7 @@ As we want to turn on security, so we can demonstrate how to get Node-RED node c
 
     ```git clone https://github.com/binnes/moreNodeRedWorkshop.git```
 
-    or if using ssh keys with github:
+    or if using ssh keys with GitHub:
   
     ```git clone git@github.com:binnes/moreNodeRedWorkshop.git```
 

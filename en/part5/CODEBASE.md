@@ -23,17 +23,17 @@ Node-RED has the [**projects**](https://nodered.org/docs/user-guide/projects/) f
 In this section you will fork a git repo, which is a starter template for a new project.
 
 1. Open a browser an navigate to the [git starter project repo](https://github.com/binnes/Node-RED-Docker)
-2. Make sure you are logged into your github account then press the **Fork** button so you have your own copy of the repo ![Fork](image/forkRepo.png)
+2. Make sure you are logged into your GitHub account then press the **Fork** button so you have your own copy of the repo ![Fork](image/forkRepo.png)
 3. Open the git settings  
   ![settings](image/gitSettings.png)
-4. (OPTIONAL) If you have 2-factor authentication enabled on your github account, then you need to use a Personal Access Token when using the git command line tools.  To create a Personal Access Token, select **Developer settings** then **Personal access tokens** then **Generate new token**.  Give the token a use, select all scopes except `admin:enterprise` and `admin:gpg.key` scope then **Generate token** ![generate token](image/gitPAT.png)
+4. (OPTIONAL) If you have 2-factor authentication enabled on your GitHub account, then you need to use a Personal Access Token when using the git command line tools.  To create a Personal Access Token, select **Developer settings** then **Personal access tokens** then **Generate new token**.  Give the token a use, select all scopes except `admin:enterprise` and `admin:gpg.key` scope then **Generate token** ![generate token](image/gitPAT.png)
 5. On your system edit file .node-red/settings.js in your home directory.  At the bottom of the file change the projects setting to `enabled : true` ![Enable Node-RED projects](image/enableProjectFeature.png)
 6. Start Node-RED running locally on your system.  If it is already running stop it by entering **Ctrl-c** in the command window where it is running.  Use command `node-red` to start Node-RED
 7. Open a browser to access your local Node-RED runtime on [http://localhost:1880](http://localhost:1880) and you should see a Projects wizard, as you've just enabled the project feature in the Node-RED editor. ![project wizard](image/projectWizard.png)
 8. Select the Clone Repository.
-    - Enter your git credentials (use the Personal Access Token as the password if you have one set on your github account - your github account password will not work if a personal access token is defined)
+    - Enter your git credentials (use the Personal Access Token as the password if you have one set on your GitHub account - your GitHub account password will not work if a personal access token is defined)
     - give the Node-RED project a name
-    - copy the Git repo URL from your git repo github page: ![github page](image/copyGitURL.png)
+    - copy the Git repo URL from your git repo GitHub page: ![GitHub page](image/copyGitURL.png)
     - press the Clone project button when all the details have been completed - leave the Credentials encryption key field blank ![Clone repo](image/cloneRepo.png)
 9. Drag an inject and debug node onto the sheet and connect them to create a basic flow then deploy the changes ![basic flow](image/basicFlow.png)
 10. Switch to the project history section in the side panel, where you can see the flows.json file has uncommitted local changes.  Move your mouse over the entry and press the **+** button to stage the change ![stage change](image/gitStage.png)
