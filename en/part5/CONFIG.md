@@ -134,7 +134,7 @@ To run locally the environment variables need to be set before Node-RED is start
 
 To get the updated flow running in Docker you need to rebuild and push the updated Node-RED application.
 
-1. Go to the github integration tab in the Node-RED editor and commit and push the latest version of your flow
+1. Go to the GitHub integration tab in the Node-RED editor and commit and push the latest version of your flow
 2. Build the container with the command:  
     `docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -t [insert your dockerhub username here]/node-red-docker-sample --push .`  
     Customise the command as required
